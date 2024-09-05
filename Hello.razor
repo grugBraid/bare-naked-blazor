@@ -1,0 +1,17 @@
+﻿@page "/hello"
+@layout Layout
+@using Microsoft.AspNetCore.Components.Web;
+
+@code {
+   [Parameter] public string FirstName { get; set; } = "World";
+}
+
+<PageTitle>Hey @FirstName</PageTitle>
+
+<h1>Hello @FirstName!</h1>
+
+<form action="/hello"
+      method="post">
+   <input name="firstName" required />
+   <button>Update Name</button>
+</form>
